@@ -39,6 +39,7 @@
                     <div class="cerca"></div>
                     <div>
                         <li v-for="(item, i) in contacts" >
+                            <img v-bind:src="'img/avatar' + item.avatar">
                             {{item.name}}
                         </li>
                     </div>
