@@ -36,10 +36,13 @@
                             <h6>Attiva notifiche desktop</h6>
                         </div>
                     </div>
-                    <div class="cerca"></div>
+                    <div class="cerca">
+                        <i class="fas fa-search"></i>
+                        <input type="text">
+                    </div>
                     <div>
-                        <li v-for="(item, i) in contacts" >
-                            <img v-bind:src="'img/avatar' + item.avatar">
+                        <li v-for="(item, i) in contacts" class="immagini-contatti">
+                            <img v-bind:src="'img/avatar' + item.avatar + '.jpg'">
                             {{item.name}}
                         </li>
                     </div>
@@ -62,7 +65,11 @@
                     <div class="message-area">
                         <div class="message-box">
                             <div class="mini-box-message">
-                                <div class="messaggio">
+                                <div class="messaggio messaggio-interlocutore">
+                                    <h5>sadasdasdasd</h5>
+                                    <h6>10/01/2020 16:15</h6>
+                                </div>
+                                <div class="messaggio messaggio-utente">
                                     <h5>sadasdasdasd</h5>
                                     <h6>10/01/2020 16:15</h6>
                                 </div>
