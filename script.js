@@ -86,5 +86,32 @@ new Vue({
                     }
                 ],
             },
-        ]
-}})
+        ],
+
+        im:1,
+        newMessage:"",
+        imgUt:"1",
+        nomUt:"Michele",
+
+    }, methods:{
+        selUte: function(i){
+            this.im = i
+            this.imgUt = i + 1
+            this.nomUt = this.contacts[i].name
+            console.log(this.imgUt)
+        },
+        addMessage: function(im){
+            this.contacts[im].messages.push({
+                        date: '19/01/2022 15:30:55',
+                        text: this.newMessage,
+                        status: 'sent'
+            })
+            this.contacts[im].messages.push({
+                date: '19/01/2022 15:30:55',
+                text: 'ok',
+                status: 'recived'
+    })
+    this.newMessage = ""
+        }
+    }
+})

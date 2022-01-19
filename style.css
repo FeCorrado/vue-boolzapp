@@ -109,7 +109,7 @@
 }
 
 .cerca input{
-    width: 230px;
+    width: 220px;
 }
 
 .utente2{
@@ -154,10 +154,12 @@
     align-items: center;
     justify-content: center;
     margin-top: 10px;
+    margin-right: 20px;
 }
 
 .send-message i{
-    font-size: 30px;
+    font-size: 25px;
+    margin-left: 10px;
 }
 
 .send-message input{
@@ -175,14 +177,6 @@ i{
     margin-left: 5px;
 }
 
-.messaggio{
-    border-radius: 10px;
-    width: 200px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 .mini-box-message div{
     margin-top: 25px;
@@ -191,10 +185,22 @@ i{
 .messaggio-utente{
     background-color: lightgreen;
     margin-left: 300px;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .messaggio-interlocutore{
     background-color: white;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .messaggio h6{
@@ -236,4 +242,9 @@ li{
 
 .utente-dx i{
     margin-left: 5px;
+}
+
+.datam{
+    font-size: 8px;
+    color: dimgrey;
 }
