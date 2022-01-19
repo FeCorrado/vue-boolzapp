@@ -43,7 +43,7 @@
                     <!--Cerca e messaggi-->
                     <div class="cerca">
                         <i class="fas fa-search"></i>
-                        <input type="text">
+                        <input type="text" v-model="namer">
                     </div>
                     <div>
                         <li @click="selUte(i)" v-for="(item, i) in contacts" class="immagini-contatti">
