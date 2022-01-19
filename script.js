@@ -1,6 +1,7 @@
 new Vue({
   el: "#app",
   data: {
+    userSrc:[],
     namer: "",
     contacts: [
       {
@@ -115,7 +116,6 @@ new Vue({
           status: "recived",
         });
       }, 1000);
-      //this.setTimeout(this.selUte2(im), 3000);
 
       /*
             if (this.contacts[im].name === 'Luisa' & this.newMessage === 'ma hai il baffo?') {
@@ -132,9 +132,10 @@ new Vue({
             */
       this.newMessage = "";
     },
+    filterProductsByName: function () {
+      this.userSrc = this.contacts.filter(
+       (contact) => contact.name.startsWith(this.namer));
+   },
   },
-  filterProductsByName: function () {
-    return this.contacts.filter(
-      (item) => item.name.startWith(this.namer));
-  },
+  
 });

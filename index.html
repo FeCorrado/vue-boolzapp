@@ -23,7 +23,7 @@
                     <!--Utente e notifiche-->
                     <div class="utente">
                         <div class="utente-sx">
-                            <img src="img/avatar_6.jpg" alt="">
+                            <img src="img/avatar_5.jpg" alt="">
                             <h5>Nome Utente</h5>
                         </div>
                         <div class="utente-dx">
@@ -43,13 +43,19 @@
                     <!--Cerca e messaggi-->
                     <div class="cerca">
                         <i class="fas fa-search"></i>
-                        <input type="text" v-model="namer">
+                        <input @keyup.enter="filterProductsByName" type="text" v-model="namer">
                     </div>
-                    <div>
-                        <li @click="selUte(i)" v-for="(item, i) in contacts" class="immagini-contatti">
+                    <div v-if="userSrc.length>0">
+                        <li @click="selUte(i)" v-for="(item, i) in userSrc" class="immagini-contatti">
                             <img v-bind:src="'img/avatar' + item.avatar + '.jpg'">
                             {{item.name}}
                         </li>
+                    </div>
+                    <div v-else>
+                        <li @click="selUte(i)" v-for="(item, i) in contacts" class="immagini-contatti">
+                            <img v-bind:src="'img/avatar' + item.avatar + '.jpg'">
+                            {{item.name}}
+                        </li> 
                     </div>
                     <!--Fine Cerca e messaggi-->
                 </div>
