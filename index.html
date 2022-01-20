@@ -81,7 +81,7 @@
                     <div class="message-area">
                         <div class="message-box">
                             <div class="mini-box-message">
-                                <li v-for="(item, i) in contacts[im].messages" :class="[contacts[im].messages[i].status === 'sent' ? 'messaggio-utente' : 'messaggio-interlocutore']">
+                                <li @click="menù" v-for="(item, i) in contacts[im].messages" :class="[contacts[im].messages[i].status === 'sent' ? 'messaggio-utente' : 'messaggio-interlocutore']">
                                     {{item.text}}
                                     <div class="datam">{{item.date}}</div>
                                 </li>

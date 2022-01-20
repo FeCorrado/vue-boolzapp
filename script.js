@@ -132,9 +132,10 @@ new Vue({
             */
       this.newMessage = "";
     },
+    
     filterProductsByName: function () {
       this.userSrc = this.contacts.filter(
-       (contact) => contact.name.startsWith(this.namer));
+       (contact) => contact.name.toLowerCase().startsWith(this.namer.toLowerCase()));
    },
   },
   
